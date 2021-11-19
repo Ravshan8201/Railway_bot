@@ -26,7 +26,7 @@ def start(update, context):
             ]
     context.bot.send_message(chat_id=user_id, text='Выберите язык:\nTilni taglang:',
                               reply_markup=InlineKeyboardMarkup([knopka_lang,knopka_lang1]))
-    sleep(1)
+
 
 
 
@@ -54,12 +54,9 @@ def next_func(update, context):
        but3 = [KeyboardButton(text=keydct[lang_][2])]
        but4 = [KeyboardButton(text=keydct[lang_][3])]
        context.bot.send_message(chat_id=user_id, text=dct[lang_][3] , reply_markup=ReplyKeyboardMarkup([but1,but2,but3,but4], resize_keyboard=True))
-       sleep(1)
-
 
 
 #111111111111111111111111111111111111111111111111111111
-
 
     if message == keydct[lang_][0] and stage_ == 3 or stage_ == 3.1 and message == back[lang_][0]:
         cur.execute(stagee.format('{}', user_id).format(3))
@@ -100,7 +97,7 @@ def next_func(update, context):
                                                                    but13,
                                                                    but14,
                                                                    but15], resize_keyboard=True))
-        sleep(1)
+
 
     #     SmSsmsmsmsmsmsmsmsm1111111111111111111111111111111
     if message == first_dct[lang_][0] and stage_ == 3:
@@ -218,7 +215,7 @@ def next_func(update, context):
         connect.commit()
 
         context.bot.send_message(chat_id=user_id, text=fdct[lang_][11])
-        sleep(1)
+
 
         but15 = [KeyboardButton(text=back[lang_][0])]
         context.bot.send_message(chat_id=user_id, text=dct[lang_][4],
@@ -228,7 +225,7 @@ def next_func(update, context):
         connect.commit()
 
         context.bot.send_message(chat_id=user_id, text=fdct[lang_][12])
-        sleep(1)
+
 
         but15 = [KeyboardButton(text=back[lang_][0])]
         context.bot.send_message(chat_id=user_id, text=dct[lang_][4],
@@ -238,7 +235,7 @@ def next_func(update, context):
         connect.commit()
 
         context.bot.send_message(chat_id=user_id, text=fdct[lang_][13])
-        sleep(1)
+
 
         but15 = [KeyboardButton(text=back[lang_][0])]
         context.bot.send_message(chat_id=user_id, text=dct[lang_][4],
@@ -248,7 +245,7 @@ def next_func(update, context):
         connect.commit()
 
         context.bot.send_message(chat_id=user_id, text=fdct[lang_][14])
-        sleep(1)
+
 
         but15 = [KeyboardButton(text=back[lang_][0])]
         context.bot.send_message(chat_id=user_id, text=dct[lang_][4],
@@ -266,7 +263,8 @@ def next_func(update, context):
         qwert = [KeyboardButton(text=back[lang_][0])]
         context.bot.send_message(chat_id=user_id, text=dct[lang_][4],
                              reply_markup=ReplyKeyboardMarkup([qwerty,qwer, qwert], resize_keyboard=True))
-        sleep(1)
+
+
 
     if message == second_dct[lang_][0] and stage_ ==3 or message == back[lang_][0] and stage_ ==3.211:
         cur.execute(stagee.format('{}', user_id).format(3.21))
@@ -305,7 +303,151 @@ def next_func(update, context):
                                                                    but13,
                                                                    but14,
                                                                    but15], resize_keyboard=True))
-        sleep(1)
+
+
+
+        # !!!!!!!!!!! 2 knopani   1 knopkasini smslaaari!!!!
+    if message == second_dct[lang_][2] and stage_ == 3.21:
+        cur.execute(stagee.format('{}', user_id).format(3.211))
+        connect.commit()
+
+        context.bot.send_message(chat_id=user_id, text=sdct[lang_][0])
+
+
+        but15 = [KeyboardButton(text=back[lang_][0])]
+        context.bot.send_message(chat_id=user_id, text=dct[lang_][4],
+                                 reply_markup=ReplyKeyboardMarkup([but15], resize_keyboard=True))
+    if message == second_dct[lang_][3] and stage_ == 3.21:
+        cur.execute(stagee.format('{}', user_id).format(3.211))
+        connect.commit()
+
+        context.bot.send_message(chat_id=user_id, text=sdct[lang_][1])
+
+
+        but15 = [KeyboardButton(text=back[lang_][0])]
+        context.bot.send_message(chat_id=user_id, text=dct[lang_][4],
+                                 reply_markup=ReplyKeyboardMarkup([but15], resize_keyboard=True))
+    if message == second_dct[lang_][4] and stage_ == 3.21:
+        cur.execute(stagee.format('{}', user_id).format(3.211))
+        connect.commit()
+
+        context.bot.send_message(chat_id=user_id, text=sdct[lang_][2])
+
+
+        but15 = [KeyboardButton(text=back[lang_][0])]
+        context.bot.send_message(chat_id=user_id, text=dct[lang_][4],
+                                 reply_markup=ReplyKeyboardMarkup([but15], resize_keyboard=True))
+    if message == second_dct[lang_][5] and stage_ == 3.21:
+        cur.execute(stagee.format('{}', user_id).format(3.211))
+        connect.commit()
+
+        context.bot.send_message(chat_id=user_id, text=sdct[lang_][3])
+
+
+        but15 = [KeyboardButton(text=back[lang_][0])]
+        context.bot.send_message(chat_id=user_id, text=dct[lang_][4],
+                                 reply_markup=ReplyKeyboardMarkup([but15], resize_keyboard=True))
+    if message == second_dct[lang_][6] and stage_ == 3.21:
+        cur.execute(stagee.format('{}', user_id).format(3.211))
+        connect.commit()
+
+        context.bot.send_message(chat_id=user_id, text=sdct[lang_][4])
+
+
+        but15 = [KeyboardButton(text=back[lang_][0])]
+        context.bot.send_message(chat_id=user_id, text=dct[lang_][4],
+                                 reply_markup=ReplyKeyboardMarkup([but15], resize_keyboard=True))
+    if message == second_dct[lang_][7] and stage_ == 3.21:
+        cur.execute(stagee.format('{}', user_id).format(3.211))
+        connect.commit()
+
+        context.bot.send_message(chat_id=user_id, text=sdct[lang_][5])
+
+
+        but15 = [KeyboardButton(text=back[lang_][0])]
+        context.bot.send_message(chat_id=user_id, text=dct[lang_][4],
+                                 reply_markup=ReplyKeyboardMarkup([but15], resize_keyboard=True))
+    if message == second_dct[lang_][8] and stage_ == 3.21:
+        cur.execute(stagee.format('{}', user_id).format(3.211))
+        connect.commit()
+
+        context.bot.send_message(chat_id=user_id, text=sdct[lang_][6])
+
+
+        but15 = [KeyboardButton(text=back[lang_][0])]
+        context.bot.send_message(chat_id=user_id, text=dct[lang_][4],
+                                 reply_markup=ReplyKeyboardMarkup([but15], resize_keyboard=True))
+    if message == second_dct[lang_][9] and stage_ == 3.21:
+        cur.execute(stagee.format('{}', user_id).format(3.211))
+        connect.commit()
+
+        context.bot.send_message(chat_id=user_id, text=sdct[lang_][7])
+
+
+        but15 = [KeyboardButton(text=back[lang_][0])]
+        context.bot.send_message(chat_id=user_id, text=dct[lang_][4],
+                                 reply_markup=ReplyKeyboardMarkup([but15], resize_keyboard=True))
+    if message == second_dct[lang_][10] and stage_ == 3.21:
+        cur.execute(stagee.format('{}', user_id).format(3.211))
+        connect.commit()
+
+        context.bot.send_message(chat_id=user_id, text=sdct[lang_][8])
+
+
+        but15 = [KeyboardButton(text=back[lang_][0])]
+        context.bot.send_message(chat_id=user_id, text=dct[lang_][4],
+                                 reply_markup=ReplyKeyboardMarkup([but15], resize_keyboard=True))
+    if message == second_dct[lang_][11] and stage_ == 3.21:
+        cur.execute(stagee.format('{}', user_id).format(3.211))
+        connect.commit()
+
+        context.bot.send_message(chat_id=user_id, text=sdct[lang_][9])
+
+
+        but15 = [KeyboardButton(text=back[lang_][0])]
+        context.bot.send_message(chat_id=user_id, text=dct[lang_][4],
+                                 reply_markup=ReplyKeyboardMarkup([but15], resize_keyboard=True))
+    if message == second_dct[lang_][12] and stage_ == 3.21:
+        cur.execute(stagee.format('{}', user_id).format(3.211))
+        connect.commit()
+
+        context.bot.send_message(chat_id=user_id, text=sdct[lang_][10])
+
+
+        but15 = [KeyboardButton(text=back[lang_][0])]
+        context.bot.send_message(chat_id=user_id, text=dct[lang_][4],
+                                 reply_markup=ReplyKeyboardMarkup([but15], resize_keyboard=True))
+    if message == second_dct[lang_][13] and stage_ == 3.21:
+        cur.execute(stagee.format('{}', user_id).format(3.211))
+        connect.commit()
+
+        context.bot.send_message(chat_id=user_id, text=sdct[lang_][11])
+
+
+        but15 = [KeyboardButton(text=back[lang_][0])]
+        context.bot.send_message(chat_id=user_id, text=dct[lang_][4],
+                                 reply_markup=ReplyKeyboardMarkup([but15], resize_keyboard=True))
+    if message == second_dct[lang_][14] and stage_ == 3.21:
+        cur.execute(stagee.format('{}', user_id).format(3.211))
+        connect.commit()
+
+        context.bot.send_message(chat_id=user_id, text=sdct[lang_][12])
+
+
+        but15 = [KeyboardButton(text=back[lang_][0])]
+        context.bot.send_message(chat_id=user_id, text=dct[lang_][4],
+                                 reply_markup=ReplyKeyboardMarkup([but15], resize_keyboard=True))
+    if message == second_dct[lang_][15] and stage_ == 3.21:
+        cur.execute(stagee.format('{}', user_id).format(3.211))
+        connect.commit()
+
+        context.bot.send_message(chat_id=user_id, text=sdct[lang_][13])
+
+
+        but15 = [KeyboardButton(text=back[lang_][0])]
+        context.bot.send_message(chat_id=user_id, text=dct[lang_][4],
+                                 reply_markup=ReplyKeyboardMarkup([but15], resize_keyboard=True))
+    # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1tugadi
 
 
     if message == second_dct[lang_][1] and stage_ ==3 or message == back[lang_][0] and stage_ ==3.221:
@@ -336,10 +478,115 @@ def next_func(update, context):
                                                                    but9,
                                                                    but15], resize_keyboard=True))
 
-        sleep(1)
 
 
-#3333333333333333333333333333333333333333333333333333333333333333333333333
+        # !!!!!!!!!!! 2 knopani   2 knopkasini smslaaari!!!!
+
+    if message == second_dct[lang_][17] and stage_ == 3.22:
+        cur.execute(stagee.format('{}', user_id).format(3.221))
+        connect.commit()
+
+        context.bot.send_message(chat_id=user_id, text=sdct[lang_][15])
+
+
+        but15 = [KeyboardButton(text=back[lang_][0])]
+        context.bot.send_message(chat_id=user_id, text=dct[lang_][4],
+                                 reply_markup=ReplyKeyboardMarkup([but15], resize_keyboard=True))
+    if message == second_dct[lang_][18] and stage_ == 3.22:
+        cur.execute(stagee.format('{}', user_id).format(3.221))
+        connect.commit()
+
+        context.bot.send_message(chat_id=user_id, text=sdct[lang_][16])
+
+
+        but15 = [KeyboardButton(text=back[lang_][0])]
+        context.bot.send_message(chat_id=user_id, text=dct[lang_][4],
+                                 reply_markup=ReplyKeyboardMarkup([but15], resize_keyboard=True))
+    if message == second_dct[lang_][19] and stage_ == 3.22:
+        cur.execute(stagee.format('{}', user_id).format(3.221))
+        connect.commit()
+
+        context.bot.send_message(chat_id=user_id, text=sdct[lang_][17])
+
+
+        but15 = [KeyboardButton(text=back[lang_][0])]
+        context.bot.send_message(chat_id=user_id, text=dct[lang_][4],
+                                 reply_markup=ReplyKeyboardMarkup([but15], resize_keyboard=True))
+    if message == second_dct[lang_][20] and stage_ == 3.22:
+        cur.execute(stagee.format('{}', user_id).format(3.221))
+        connect.commit()
+
+        context.bot.send_message(chat_id=user_id, text=sdct[lang_][18])
+
+
+        but15 = [KeyboardButton(text=back[lang_][0])]
+        context.bot.send_message(chat_id=user_id, text=dct[lang_][4],
+                                 reply_markup=ReplyKeyboardMarkup([but15], resize_keyboard=True))
+    if message == second_dct[lang_][21] and stage_ == 3.22:
+        cur.execute(stagee.format('{}', user_id).format(3.221))
+        connect.commit()
+
+        context.bot.send_message(chat_id=user_id, text=sdct[lang_][19])
+
+
+        but15 = [KeyboardButton(text=back[lang_][0])]
+        context.bot.send_message(chat_id=user_id, text=dct[lang_][4],
+                                 reply_markup=ReplyKeyboardMarkup([but15], resize_keyboard=True))
+    if message == second_dct[lang_][22] and stage_ == 3.22:
+        cur.execute(stagee.format('{}', user_id).format(3.221))
+        connect.commit()
+
+        context.bot.send_message(chat_id=user_id, text=sdct[lang_][20])
+
+
+        but15 = [KeyboardButton(text=back[lang_][0])]
+        context.bot.send_message(chat_id=user_id, text=dct[lang_][4],
+                                 reply_markup=ReplyKeyboardMarkup([but15], resize_keyboard=True))
+    if message == second_dct[lang_][23] and stage_ == 3.22:
+        cur.execute(stagee.format('{}', user_id).format(3.221))
+        connect.commit()
+
+        context.bot.send_message(chat_id=user_id, text=sdct[lang_][21])
+
+
+        but15 = [KeyboardButton(text=back[lang_][0])]
+        context.bot.send_message(chat_id=user_id, text=dct[lang_][4],
+                                 reply_markup=ReplyKeyboardMarkup([but15], resize_keyboard=True))
+    if message == second_dct[lang_][24] and stage_ == 3.22:
+        cur.execute(stagee.format('{}', user_id).format(3.221))
+        connect.commit()
+
+        context.bot.send_message(chat_id=user_id, text=sdct[lang_][22])
+
+
+        but15 = [KeyboardButton(text=back[lang_][0])]
+        context.bot.send_message(chat_id=user_id, text=dct[lang_][4],
+                                 reply_markup=ReplyKeyboardMarkup([but15], resize_keyboard=True))
+    if message == second_dct[lang_][25] and stage_ == 3.22:
+        cur.execute(stagee.format('{}', user_id).format(3.221))
+        connect.commit()
+
+        context.bot.send_message(chat_id=user_id, text=sdct[lang_][23])
+
+
+        but15 = [KeyboardButton(text=back[lang_][0])]
+        context.bot.send_message(chat_id=user_id, text=dct[lang_][4],
+                                 reply_markup=ReplyKeyboardMarkup([but15], resize_keyboard=True))
+    if message == second_dct[lang_][26] and stage_ == 3.22:
+        cur.execute(stagee.format('{}', user_id).format(3.221))
+        connect.commit()
+
+        context.bot.send_message(chat_id=user_id, text=sdct[lang_][24])
+
+
+        but15 = [KeyboardButton(text=back[lang_][0])]
+        context.bot.send_message(chat_id=user_id, text=dct[lang_][4],
+                                 reply_markup=ReplyKeyboardMarkup([but15], resize_keyboard=True))
+        # !!!!!!!!!!! 2 knopani   2 knopkasini smslaaari!!!!ТУГАДИ
+
+
+
+    #3333333333333333333333333333333333333333333333333333333333333333333333333
 
 
     if message == keydct[lang_][2] and stage_ == 3:
@@ -364,7 +611,6 @@ def next_func(update, context):
                 InlineKeyboardButton(text='3', url='''https://t.me/joinchat/IO56bnf1u0BhZGYy''')]
         context.bot.send_message(chat_id=user_id, text=dct[lang_][6],
                                          reply_markup=InlineKeyboardMarkup([web]))
-        sleep(1)
 
 def ru(update, context):
     user_id = update.callback_query.from_user.id
@@ -381,7 +627,7 @@ def ru(update, context):
 
     k_but = [KeyboardButton(text='далее➡️➡️➡️')]
     context.bot.send_message(text=dct[lang_][2].format(f_name), chat_id=user_id, reply_markup= ReplyKeyboardMarkup([k_but], resize_keyboard=True))
-    sleep(1)
+
 def uz(update, context):
     user_id = update.callback_query.from_user.id
     f_name = update.callback_query.from_user.first_name
@@ -396,4 +642,3 @@ def uz(update, context):
 
     k_but = [KeyboardButton(text='davom etish➡️➡️➡️')]
     context.bot.send_message(chat_id=user_id, text=dct[lang_][2].format(f_name),  reply_markup= ReplyKeyboardMarkup([k_but], resize_keyboard=True))
-    sleep(1)
