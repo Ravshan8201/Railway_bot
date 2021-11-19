@@ -1,4 +1,4 @@
-TOKEN='2095295461:AAEsvyJL5kOsk41El6MmPL8irhKoyndDYts'
+TOKEN='2113852904:AAFvFYBzFNP8TVCLoq26EmrC69gOej49NbI'
 
 
 back = {
@@ -22,45 +22,118 @@ fdct = {
 
     1:[
 
-        'Имя:  Мамасидиков Мухсинжон Мусажонович \n\nНомер телефона:  71 299-98-27 ',  # 0
-        'Имя:  Шаюнусов Бунед Солиевич \n\nНомер телефона:  71 299-75-45 ',  # 1
-        'Имя:  Abduraximov Shodmonqul Tojiqulovich \n\nНомер телефона:  71 299-74-56 ',  # 2
-        'Имя:  Абдуллаев Бахром Шарафхужаевич \n\nНомер телефона:  71 299-95-22 ',  # 3
-        'Имя:  Муйдинов Дилшод Шавкатович \n\nНомер телефона:  71 299-93-17 ',  # 4
-        'Имя:  Хикматова Ханифа Насимовна \n\nНомер телефона:  71 299-74-59 ',  # 5
-        'Имя:  Мансуров Бокижон Мансурович \n\nНомер телефона:  71 237-80-44 ',  # 6
-        'Имя:  Ганиев Бобомурод Сайдимуродович \n\nНомер телефона:  71 299-91-55 ',  # 7
-        'Имя:  Убайдуллаев Абдухафиз Маруфжон угли \n\nНомер телефона:  71 299-95-07 ',  # 8
-        'Имя:  Кочкарова Дилором Рихсивоевна \n\nНомер телефона:   71 299-75-45 ',  # 9
-        'Имя:  Маймакова Шахло Рисбаевна \n\nНомер телефона:  71 299-76-83 ',  # 10
-        'Имя:  Ибрагимова Лобар Бахтияровна \n\nНомер телефона:   71 299 77 90 ',  # 11
-        'Имя:  Назаров Юлдаш Ахмедович \n\nНомер телефона:   71 299 95 09 ',  # 12
-        'Имя:  Маматова Маҳзуна Фуркатовна \n\nНомер телефона:  71 299 74 59 ',  # 13
-        'Имя:  Турсунов Элмурод Рузибой угли \n\nНомер телефона:  71 299 73 84  ',  # 14
+        'Имя:  Мамасидиков Мухсинжон Мусажонович \n\nНомер телефона:  (71) 299-98-27 ',  # 0
+        'Имя:  Шаюнусов Бунед Солиевич \n\nНомер телефона:  (71) 299-75-45 ',  # 1
+        'Имя:  Abduraximov Shodmonqul Tojiqulovich \n\nНомер телефона:  (71) 299-74-56 ',  # 2
+        'Имя:  Абдуллаев Бахром Шарафхужаевич \n\nНомер телефона:  (71) 299-95-22 ',  # 3
+        'Имя:  Муйдинов Дилшод Шавкатович \n\nНомер телефона:  (71) 299-93-17 ',  # 4
+        'Имя:  Хикматова Ханифа Насимовна \n\nНомер телефона:  (71) 299-74-59 ',  # 5
+        'Имя:  Мансуров Бокижон Мансурович \n\nНомер телефона:  (71) 237-80-44 ',  # 6
+        'Имя:  Ганиев Бобомурод Сайдимуродович \n\nНомер телефона:  (71) 299-91-55 ',  # 7
+        'Имя:  Убайдуллаев Абдухафиз Маруфжон угли \n\nНомер телефона:  (71) 299-95-07 ',  # 8
+        'Имя:  Кочкарова Дилором Рихсивоевна \n\nНомер телефона:   (71) 299-75-45 ',  # 9
+        'Имя:  Маймакова Шахло Рисбаевна \n\nНомер телефона:  (71) 299-76-83 ',  # 10
+        'Имя:  Ибрагимова Лобар Бахтияровна \n\nНомер телефона:   (71) 299-77-90 ',  # 11
+        'Имя:  Назаров Юлдаш Ахмедович \n\nНомер телефона:   (71) 299-95-09 ',  # 12
+        'Имя:  Маматова Маҳзуна Фуркатовна \n\nНомер телефона:  (71) 299-74-59 ',  # 13
+        'Имя:  Турсунов Элмурод Рузибой угли \n\nНомер телефона:  (71) 299-73-84  ',  # 14
 
     ],
 
 
     2:[
 
-            'Ismi:  Mamasidikov Muxsinjon Musajonovich \n\nTelefon raqami:  71 299-98-27 ',  # 0
-            'Ismi:  Shayunusov Bunyod Soliyevich \n\nTelefon raqami:  71 299-75-45 ',  # 1
-            'Ismi:  Abduraximov Shodmonqul Tojiqulovich \n\nTelefon raqami:  71 299-74-56 ', #2
-            '''Ismi:  Abdullayev Bahrom Sharafxo'jayevich \n\nTelefon raqami:  71 299-95-22 ''', #3
-            'Ismi:  Muydinov Dilshod Shavkatovich \n\nTelefon raqami:  71 299-93-17 ', #4
-            'Ismi:  Xikmatova Xanifa Nasimovna \n\nTelefon raqami:  71 299-74-59 ', #5
-            'Ismi:  Mansurov Boqijon Mansurovich \n\nTelefon raqami:  71 237-80-44 ', #6
-            'Ismi:  Ganiyev Bobomurod Saydimurodovich \n\nTelefon raqami:  71 299-91-55 ', #7
-            '''Ismi:  Ubaydullayev Abduxafiz Marufjon o'g'li \n\nTelefon raqami:  71 299-95-07 ''', #8
-            'Ismi:  Kochkarova Dilorom Rixsiboyeva \n\nTelefon raqami:   71 299-75-45 ', #9
-            'Ismi:  Maymakova Shaxlo Rixsibayeva \n\nTelefon raqami:  71 299-76-83 ',  # 10
-            'Ismi:  Ibragimova Lobar Baxtiyarovna \n\nTelefon raqami:   71 299 77 90 ',  # 11
-            'Ismi:  Nazarov Yuldash Axmedovich \n\nTelefon raqami:   71 299 95 09 ',  # 12
-            'Ismi:  Mamatova Mahzuna Furqatovna \n\nTelefon raqami:  71 299 74 59 ',  # 14
-            '''Ismi:  Tursunov Elmurod Ro'ziboy o'g'li \n\nTelefon raqami:  71 299 73 84  ''',  # 6
+            'Ismi:  Mamasidikov Muxsinjon Musajonovich \n\nTelefon raqami:  (71)299-98-27 ',  # 0
+            'Ismi:  Shayunusov Bunyod Soliyevich \n\nTelefon raqami:  (71) 299-75-45 ',  # 1
+            'Ismi:  Abduraximov Shodmonqul Tojiqulovich \n\nTelefon raqami:  (71) 299-74-56 ', #2
+            '''Ismi:  Abdullayev Bahrom Sharafxo'jayevich \n\nTelefon raqami:  (71) 299-95-22 ''', #3
+            'Ismi:  Muydinov Dilshod Shavkatovich \n\nTelefon raqami:  (71) 299-93-17 ', #4
+            'Ismi:  Xikmatova Xanifa Nasimovna \n\nTelefon raqami:  (71) 299-74-59 ', #5
+            'Ismi:  Mansurov Boqijon Mansurovich \n\nTelefon raqami:  (71) 237-80-44 ', #6
+            'Ismi:  Ganiyev Bobomurod Saydimurodovich \n\nTelefon raqami:  (71) 299-91-55 ', #7
+            '''Ismi:  Ubaydullayev Abduxafiz Marufjon o'g'li \n\nTelefon raqami:  (71) 299-95-07 ''', #8
+            'Ismi:  Kochkarova Dilorom Rixsiboyeva \n\nTelefon raqami:   (71) 299-75-45 ', #9
+            'Ismi:  Maymakova Shaxlo Rixsibayeva \n\nTelefon raqami:  (71) 299-76-83 ',  # 10
+            'Ismi:  Ibragimova Lobar Baxtiyarovna \n\nTelefon raqami:   (71) 299-77-90 ',  # 11
+            'Ismi:  Nazarov Yuldash Axmedovich \n\nTelefon raqami:   (71) 299-95-09 ',  # 12
+            'Ismi:  Mamatova Mahzuna Furqatovna \n\nTelefon raqami:  (71) 299-74-59 ',  # 14
+            '''Ismi:  Tursunov Elmurod Ro'ziboy o'g'li \n\nTelefon raqami:  (71) 299-73-84  ''',  # 6
             '',  # 7
             '',  # 8
             '',  # 9
+    ]
+}
+
+sdct = {
+
+    1:[
+
+        'Центральная клиническая больница   \n\nНомер телефона:  (71) 299-62-90',  # 0
+        'Центральная поликлиника   \n\nНомер телефона:  (71) 299-71-31',  # 1
+        'Детская дорожная больница   \n\nНомер телефона:  (71) 299-08-84',  # 2
+        'ПМСП "Саломатлик"   \n\nНомер телефона:  ',  # 3!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        'Узловая объединённая больница Хаваст   \n\nНомер телефона:  (367) 364-64-94',  # 4
+        'Кокандская объединённая железнодорожная больница   \n\nНомер телефона:  (73)543-13-07',  # 5
+        'Объдинённая больница станции Андижан   \n\nНомер телефона:  ',  # 6!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        'Объдинённая больница станции Самарканд   \n\nНомер телефона:   (362) 229 57 84',  # 7
+        'Железнодорожная больница станции Бухара-1   \n\nНомер телефона:  (0365) 524-32-27',  # 8
+        'Каршинская железнодорожная больница   \n\nНомер телефона:  (375) 227-53-78',  # 9
+        'Термезская объединённая железнодорожная больница   \n\nНомер телефона:  (0 376) 222-23-64',  # 10
+        'Узловая больница на станции Ургенч   \n\nНомер телефона:  (0 362) 225-60-97',  # 11
+        'Объединённая железнодорожная больница станции Хаджейли   \n\nНомер телефона:  (361) 554-17-03',  # 12
+        'Кунградская железнодорожная больница   \n\nНомер телефона:  (0 361) 312-21-89',  # 13
+        'Санаторий-профилакторий "Кунград"   \n\nНомер телефона:  ',  # 14!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+        'Центральная санитарно-эпидемиологическая станция - АО "Узбекистон темир йуллари"   \n\nНомер телефона:  (71) 299-74-56',  # 15
+        'Хавастская линейная санитарно-эпидемиологическая станция - АО "Узбекистон темир йуллари"   \n\nНомер телефона:  (90)255-79-77',  # 16
+        'Кокандская линейная санитарно-эпидемиологическая станция - АО "Узбекистон темир йуллари"   \n\nНомер телефона:  (73)543-12-69',  # 17
+        'Андижанская линейная санитарно-эпидемиологическая станция - АО "Узбекистон темир йуллари"   \n\nНомер телефона:  (74)228-44-65',  # 18
+        'Самаркандская линейная санитарно-эпидемиологическая станция - АО "Узбекистон темир йуллари"   \n\nНомер телефона:  (66)229-49-45',  # 19
+        'Бухарская линейная санитарно-эпидемиологическая станция - АО "Узбекистон темир йуллари"   \n\nНомер телефона:  (99)709-09-15',  # 20
+        'Каршинская линейная санитарно-эпидемиологическая станция - АО "Узбекистон темир йуллари"   \n\nНомер телефона:  ',  # 21!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        'Термезская линейная санитарно-эпидемиологическая станция - АО "Узбекистон темир йуллари"   \n\nНомер телефона:  (76)222-13-42',  # 22
+        'Кунградская линейная санитарно-эпидемиологическая станция - АО "Узбекистон темир йуллари"   \n\nНомер телефона:  (61)312-21-95',  # 23
+        'Дорожная противочумная станция   \n\nНомер телефона:  (71)258-05-60',  # 24
+        'Имя:   \n\nНомер телефона:  ',  # 25
+        'Имя:   \n\nНомер телефона:  ',  # 26
+        'Имя:   \n\nНомер телефона:  ',  # 27
+
+
+    ],
+
+    2:[
+
+        'Markaziy klinik kasalxona \n\nTelefon raqami:  (71) 299-62-90',  # 0
+        'Markaziy poliklinika \n\nTelefon raqami:  (71) 299-71-31',  # 1
+        '''Yo'l bolalar kasalxonasi \n\nTelefon raqami:  (71) 299-08-84''',  # 2
+        '"Salomatlik" tibbiy-sanitar yordam poyezdi \n\nTelefon raqami:  ''',  # 3!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        'Xovos birlashgan tarmoq shifoxonasi \n\nTelefon raqami:  (367) 364-64-94',  # 4
+        '''Qo’qon birlashgan temir yo'l shifoxonasi \n\nTelefon raqami:  (73)543-13-07''',  # 4
+        'Andijon bekati birlashgan shifoxonasi \n\nTelefon raqami:  ',  # 5!!!!!!!!!!!!!!!!!!!
+        'Samarqand bekati birlashgan kasalxonasi \n\nTelefon raqami:   (362) 229 57 84',  # 6
+        '''Buxoro - 1 bekati temir yo'l shifoxonasi \n\nTelefon raqami:  (0365) 524-32-27''',  # 7
+        '''Qarshi temir yo'l shifoxonasi \n\nTelefon raqami:  (375) 227-53-78''',  # 8
+        '''Termiz temir yo'l birlashgan shifoxonasi \n\nTelefon raqami:  (0 376) 222-23-64''',  # 9
+        'Urganch manzilgohi shifoxonasi \n\nTelefon raqami:  (0362) 225-60-97',  # 10
+        '''Xo’jayli bekati birlashgan temir yo'l shifoxonasi \n\nTelefon raqami:  (361) 554-17-03''',  # 11
+        '''Qo’ng’irot temir yo'l shifoxonasi \n\nTelefon raqami:  (0 361) 312-21-89''',  # 12
+        '''"Qo'ng'irot" sanatoriy-profilaktoriyasi \n\nTelefon raqami:  ''',  # 13 #!!!!!!!!!!!!!!!!!!!!!
+
+        'Markaziy sanitariya epidemiologiya stansiya \n\nTelefon raqami:  (71) 299-74-56',  # 15
+        'Xovos tarmoq sanitariya epidemiologiya stansiya \n\nTelefon raqami:  (90) 255-79-77',  # 16
+        '''Qo'qon tarmoq sanitariya epidemiologiya stansiya \n\nTelefon raqami:  (73) 543-12-69''',  # 17
+        'Andijon tarmoq sanitariya epidemiologiya stansiya \n\nTelefon raqami:  (74) 228-44-65',  # 18
+        'Samarqand tarmoq sanitariya epidemiologiya stansiya \n\nTelefon raqami:  (66) 229-49-45',  # 19
+        'Buxoro tarmoq sanitariya epidemiologiya stansiya \n\nTelefon raqami:  (99) 709-09-15',  # 20
+        'Qarshi tarmoq sanitariya epidemiologiya stansiya \n\nTelefon raqami:  ',  # 21 !!!!!!!!!!!!!!!!!!!!!!!!
+        'Termez tarmoq sanitariya epidemiologiya stansiya \n\nTelefon raqami:  (76)222-13-42',  # 22
+        '''Qo'ng'irot tarmoq sanitariya epidemiologiya stansiya \n\nTelefon raqami:  (61)312-21-95''',  # 23
+        '''Temir yo'l o'latga qarshi stansiyasi \n\nTelefon raqami: (71)258-05-60 ''',  # 24
+        'Ismi:   \n\nTelefon raqami:  ',  # 24
+        'Ismi:   \n\nTelefon raqami:  ',  # 25
+        'Ismi:   \n\nTelefon raqami:  ',  # 26
+        'Ismi:   \n\nTelefon raqami:  ',  # 27
+
     ]
 }
 
@@ -247,6 +320,16 @@ second_dct = {
     ]
 
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
