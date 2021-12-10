@@ -2,6 +2,10 @@ from cons import *
 from cons import dct
 from telegram import KeyboardButton, ReplyKeyboardMarkup, InlineKeyboardButton, InlineKeyboardMarkup
 from time import sleep
+from logger import logger
+from telegram.error import BadRequest
+from telegram.ext import updater
+
 from sql_cons import *
 import sqlite3
 def start(update, context):
@@ -642,3 +646,38 @@ def uz(update, context):
 
     k_but = [KeyboardButton(text='davom etish➡️➡️➡️')]
     context.bot.send_message(chat_id=user_id, text=dct[lang_][2].format(f_name),  reply_markup= ReplyKeyboardMarkup([k_but], resize_keyboard=True))
+
+
+
+
+def error_callback(bot, update, error):
+    try:
+        raise error
+    except BadRequest:
+        # handle malformed requests - read more below!
+        print('Same message')
+
+
+
+def error(bot, update, error):
+    if not (error.message == "Message is not modified"):
+        logger.warning('Update "%s" caused error "%s"' % (update, error))
+
+    updater.dispatcher.logger.addFilter(
+        (lambda s: not s.msg.endswith('A TelegramError was raised while processing the Update')))
+
+def error_callback(bot, update, error):
+    try:
+        raise error
+    except BadRequest:
+        # handle malformed requests - read more below!
+        print('Same message')
+
+
+
+def error(bot, update, error):
+    if not (error.message == "Message is not modified"):
+        logger.warning('Update "%s" caused error "%s"' % (update, error))
+
+    updater.dispatcher.logger.addFilter(
+        (lambda s: not s.msg.endswith('A TelegramError was raised while processing the Update')))
