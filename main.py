@@ -30,6 +30,9 @@ def main():
 
     upd.idle()
 
+ALL_MODULES = sorted(__list_all_modules())
+LOGGER.info("Modules to load: %s", str(ALL_MODULES))
+__all__ = ALL_MODULES + ["ALL_MODULES"]
 
 if __name__ == 'main':
     LOGGER.info("Successfully loaded modules: " + str(ALL_MODULES))
