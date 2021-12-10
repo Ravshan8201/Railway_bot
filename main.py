@@ -2,7 +2,8 @@ from telegram.ext import Updater, Dispatcher, CommandHandler, MessageHandler, Fi
 from func import *
 
 from tg_bot import LOAD, NO_LOAD, LOGGER
-
+from tg_bot import dispatcher, updater, TOKEN, WEBHOOK, OWNER_ID, DONATION_LINK, CERT_PATH, PORT, URL, LOGGER, \
+    ALLOW_EXCL
 
 def __list_all_modules():
     from os.path import dirname, basename, isfile
