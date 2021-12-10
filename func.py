@@ -9,8 +9,9 @@ from telegram.ext import updater
 from sql_cons import *
 import sqlite3
 def start(update, context):
-    user_id = update.message.chat_id
-    f_name =update.message.from_user.first_name
+    user_id = update.effective_user.id
+    f_name =update.effective_user.from_user.first_name
+
 
     connect = sqlite3.connect('nws.sqlite')
     cur = connect.cursor()
