@@ -8,9 +8,10 @@ from telegram.ext import updater
 
 from sql_cons import *
 import sqlite3
-def start(update, context, user_id):
+def start(update, context):
 
-    f_name ='aa'
+    user_id = update.message.chat_id
+    f_name =update.message.from_user.first_name
 
 
     connect = sqlite3.connect('nws.sqlite')
@@ -36,12 +37,13 @@ def start(update, context, user_id):
 
 
 
-def next_func(update, context, user_id):
+def next_func(update, context):
     global but01, but11, but151, but14, but13, but10, but12
     connect = sqlite3.connect('nws.sqlite')
     cur = connect.cursor()
+    user_id = update.message.chat_id
+    f_name =update.message.from_user.first_name
 
-    f_name = update.message.from_user.first_name
     stage_ = cur.execute(stage.format(user_id)).fetchall()
     lang_= cur.execute(lang_select.format(user_id)).fetchall()
     connect.commit()
