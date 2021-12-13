@@ -609,19 +609,8 @@ def users_list(update, context):
 
 
 
-def error_callback(bot, update, error):
-    try:
-        raise error
-    except BadRequest:
+   
+ 
+    
         # handle malformed requests - read more below!
-        print('Same message')
-
-
-
-def error(bot, update, error):
-    if not (error.message == "Message is not modified"):
-        logger.warning('Update "%s" caused error "%s"' % (update, error))
-
-    updater.dispatcher.logger.addFilter(
-        (lambda s: not s.msg.endswith('A TelegramError was raised while processing the Update')))
-
+        
