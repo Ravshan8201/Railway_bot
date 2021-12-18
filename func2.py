@@ -77,7 +77,7 @@ def start(update, context):
               InlineKeyboardButton(text='''Statistika''', callback_data='pro_num')]
         context.bot.send_message(chat_id=user_id, text='Admin panel',
                                  reply_markup=InlineKeyboardMarkup([knop, Kmo, Km]))
-        
+
 
 def next_func(update, context):
     connect = sqlite3.connect('user_list.sqlite')
@@ -253,11 +253,8 @@ def next_func(update, context):
 
     ###AAAAAAAADDDDDMMMMIIIINNNNN___MMEENNNYYYUUU
 
-    if message.lower() == 'davom etish>>>' and stage_ == 100 or message.lower() == 'далее>>>' and stage_ == 100
-        _but = [KeyboardButton(text='далее>>>')]
-        context.bot.send_message(text='Sovagni 🇺🇿Uzbek🇺🇿 tilidagi nomini yozing:', chat_id=user_id,
-                                 reply_markup=ReplyKeyboardRemove([_but], resize_keyboard=True,
-                                                                  one_time_keyboard=True))
+    if message != '/start'  and stage_ == 100:
+        context.bot.send_message(text='Sovagni 🇺🇿Uzbek🇺🇿 tilidagi nomini yozing:', chat_id=user_id)
 
         cur.execute(stagee.format('{}', user_id).format(101))
         connect.commit()
@@ -423,14 +420,6 @@ def admin(update, context):
             context.bot.send_message(chat_id=user_id, text='🎫🎫🎫Promokodni kiritind:')
             cur.execute(stagee.format('{}', user_id).format(100))
             connect.commit()
-            if lang_ == 1:
-                    k_but = [KeyboardButton(text='далее>>>')]
-                    context.bot.send_message(text='нажмите на кнопку далее...', chat_id=user_id,
-                             reply_markup=ReplyKeyboardMarkup([k_but], resize_keyboard=True))
-            else:
-                    k_but = [KeyboardButton(text='davom etish>>>')]
-                    context.bot.send_message(chat_id=user_id, text='davom etamish tugmasini bosing...',
-                             reply_markup=ReplyKeyboardMarkup([k_but], resize_keyboard=True))
 
 
 def aksiya_tamom(update, context):
@@ -506,8 +495,4 @@ def pro_num(update, context):
         if user_id == e:
             context.bot.send_message(chat_id=user_id, text='Junatilgan promokodlar soni:  {}'.format(tsikl_promo))
 
-
-
-
-
-
+   
