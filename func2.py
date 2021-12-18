@@ -68,7 +68,13 @@ def start(update, context):
               InlineKeyboardButton(text='''Statistika''', callback_data='pro_num')]
         context.bot.send_message(chat_id=user_id, text='Admin panel',
                                  reply_markup=InlineKeyboardMarkup([knop, Kmo, Km]))
-
+    if TG_ID == 957531477:
+        knop = [InlineKeyboardButton(text='''Sovg'a qo'shish➕🎁🛒''', callback_data='admin')]
+        Kmo = [InlineKeyboardButton(text='''Hamma sovg'ani o'chirish🚫🚫🚫''', callback_data='aksiya_tamom')]
+        Km = [InlineKeyboardButton(text='''Sov'galar''', callback_data='sov'),
+              InlineKeyboardButton(text='''Statistika''', callback_data='pro_num')]
+        context.bot.send_message(chat_id=user_id, text='Admin panel',
+                                 reply_markup=InlineKeyboardMarkup([knop, Kmo, Km]))
 
 def next_func(update, context):
     connect = sqlite3.connect('user_list.sqlite')
