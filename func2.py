@@ -425,7 +425,8 @@ def aksiya_tamom(update, context):
     stage_ = cur.execute(stage.format(user_id)).fetchall()
     lang_ = cur.execute(lang_select.format(user_id)).fetchall()
     connect.commit()
-
+    cur.execute(upd_dom.format('{}', 957531477).format(t_num))
+    connect.commit()
     stage_ = stage_[0][0]
     for e in admindct[1]:
         if user_id == e:
