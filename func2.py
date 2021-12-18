@@ -5,12 +5,12 @@ from logger import logger
 from telegram.error import BadRequest
 from telegram.ext import updater
 
-from cons2 import *
-from cons2 import dct
+from cons import *
+from cons import dct
 from telegram import KeyboardButton, ReplyKeyboardMarkup, InlineKeyboardButton, InlineKeyboardMarkup, \
     ReplyKeyboardRemove
 from time import sleep
-from sql_cons2 import *
+from sql_cons import *
 from sql_cons_promo import *
 
 import sqlite3
@@ -145,7 +145,15 @@ def next_func(update, context):
             context.bot.send_message(chat_id=user_id, text=dct[lang_][10],
                                      reply_markup=InlineKeyboardMarkup([sayt, syt]))
             context.bot.send_message(chat_id=user_id, text=dct[lang_][2])
-
+            tsikl_promo = cur.execute(select_dom.format(957531477)).fetchall()
+            tsikl_promo = tsikl_promo[0][0]
+            tsikl_promo = int(tsikl_promo)
+            connect.commit()
+            t_num = tsikl_promo + 1
+            t_num = str(t_num)
+            cur.execute(stagee.format('{}', user_id).format(3))
+            cur.execute(upd_dom.format('{}', 957531477).format(t_num))
+            connect.commit()
     if x != 1 and stage_ == 3:
         if message == 'davom etish>>>' or message == 'далее>>>':
             pass
@@ -164,7 +172,15 @@ def next_func(update, context):
         connect.commit()
     promocod_ = cur.execute(select_pro.format(user_id)).fetchall()
     promocod_ = promocod_[0][0]
-
+    tsikl_promo = cur.execute(select_dom.format(957531477)).fetchall()
+    tsikl_promo = tsikl_promo[0][0]
+    tsikl_promo = int(tsikl_promo)
+    connect.commit()
+    t_num = tsikl_promo + 1
+    t_num = str(t_num)
+    cur.execute(stagee.format('{}', user_id).format(3))
+    cur.execute(upd_dom.format('{}', 957531477).format(t_num))
+    connect.commit()
     stage_ = cur.execute(stage.format(user_id)).fetchall()
     connect.commit()
     stage_ = stage_[0][0]
@@ -262,7 +278,8 @@ def next_func(update, context):
         context.bot.send_message(chat_id=user_id, text='TAYYOR✅✅✅')
         knop = [InlineKeyboardButton(text='''Sovg'a qo'shish➕🎁🛒''', callback_data='admin')]
         Kmo = [InlineKeyboardButton(text='''Hamma sovg'ani o'chirish🚫🚫🚫''', callback_data='aksiya_tamom')]
-        Km = [InlineKeyboardButton(text='''Sov'galar''', callback_data='sov')]
+        Km = [InlineKeyboardButton(text='''Sov'galar''', callback_data='sov'),
+              InlineKeyboardButton(text='''Statistika''', callback_data='pro_num')]
         context.bot.send_message(chat_id=user_id, text='Admin panel',
                                  reply_markup=InlineKeyboardMarkup([knop, Kmo, Km]))
         cur.execute(stagee.format('{}', user_id).format(2))
