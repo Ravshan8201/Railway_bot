@@ -253,7 +253,7 @@ def next_func(update, context):
 
     ###AAAAAAAADDDDDMMMMIIIINNNNN___MMEENNNYYYUUU
 
-if message.lower() == 'davom etish>>>' and stage_ == 100 or message.lower() == 'далее>>>' and stage_ == 100
+    if message.lower() == 'davom etish>>>' and stage_ == 100 or message.lower() == 'далее>>>' and stage_ == 100
         _but = [KeyboardButton(text='далее>>>')]
         context.bot.send_message(text='Sovagni 🇺🇿Uzbek🇺🇿 tilidagi nomini yozing:', chat_id=user_id,
                                  reply_markup=ReplyKeyboardRemove([_but], resize_keyboard=True,
