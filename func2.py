@@ -253,7 +253,7 @@ def next_func(update, context):
 
     ###AAAAAAAADDDDDMMMMIIIINNNNN___MMEENNNYYYUUU
 
-    if stage_ == 100 and message != '/admin':
+    if stage_ == 100 :
         context.bot.send_message(chat_id=user_id, text='Sovagni 🇺🇿Uzbek🇺🇿 tilidagi nomini yozing:')
         cur.execute(stagee.format('{}', user_id).format(101))
         connect.commit()
