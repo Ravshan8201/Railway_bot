@@ -32,3 +32,14 @@ UPDATE Promo_list
 SET Name_uz = '{}'
 Where Promo = '{}'
 '''
+
+name_ru_id = '''
+SELECT Name_ru 
+FROM Promo_list
+Where Promo = '{}'
+'''
+name_ru_upd = '''
+UPDATE Promo_list  
+SET Name_ru = '{}'
+Where Promo = '{}'
+'''
