@@ -506,12 +506,7 @@ def pro_num(update, context):
         if user_id == e:
             context.bot.send_message(chat_id=user_id, text='Junatilgan promokodlar soni:  {}'.format(tsikl_promo))
 
-def error_callback(bot, update, error):
-    try:
-        raise error
-    except BadRequest:
-        # handle malformed requests - read more below!
-        print('Same message')
+
 
 
 
