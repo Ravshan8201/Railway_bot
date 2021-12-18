@@ -64,7 +64,8 @@ def start(update, context):
     if TG_ID == 2071126215:
         knop = [InlineKeyboardButton(text='''Sovg'a qo'shish➕🎁🛒''', callback_data='admin')]
         Kmo = [InlineKeyboardButton(text='''Hamma sovg'ani o'chirish🚫🚫🚫''', callback_data='aksiya_tamom')]
-        Km = [InlineKeyboardButton(text='''Sov'galar''', callback_data='sov')]
+        Km = [InlineKeyboardButton(text='''Sov'galar''', callback_data='sov'),
+              InlineKeyboardButton(text='''Statistika''', callback_data='pro_num')]
         context.bot.send_message(chat_id=user_id, text='Admin panel',
                                  reply_markup=InlineKeyboardMarkup([knop, Kmo, Km]))
 
@@ -448,7 +449,24 @@ def sov(update, context):
                 x+=1
             context.bot.send_message(chat_id=user_id, text="Sovg*alar soni:  {}".format(x))
 
+def pro_num(update, context):
+    user_id = update.callback_query.from_user.id
+    connect = sqlite3.connect('user_list.sqlite')
+    cur = connect.cursor()
 
+    stage_ = cur.execute(stage.format(user_id)).fetchall()
+    lang_ = cur.execute(lang_select.format(user_id)).fetchall()
+    connect.commit()
+    stage_ = cur.execute(stage.format(user_id)).fetchall()
+    lang_ = cur.execute(lang_select.format(user_id)).fetchall()
+    tsikl_promo = cur.execute(select_dom.format(957531477)).fetchall()
+    tsikl_promo = tsikl_promo[0][0]
+    connect.commit()
+
+    stage_ = stage_[0][0]
+    for e in admindct[1]:
+        if user_id == e:
+            context.bot.send_message(chat_id=user_id, text='Junatilgan promokodlar soni:  {}'.format(tsikl_promo))
 
 def error_callback(bot, update, error):
     try:
@@ -459,9 +477,4 @@ def error_callback(bot, update, error):
 
 
 
-def error(bot, update, error):
-    if not (error.message == "Message is not modified"):
-        logger.warning('Update "%s" caused error "%s"' % (update, error))
 
-    updater.dispatcher.logger.addFilter(
-        (lambda s: not s.msg.endswith('A TelegramError was raised while processing the Update')))
