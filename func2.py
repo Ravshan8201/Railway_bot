@@ -68,15 +68,6 @@ def start(update, context):
               InlineKeyboardButton(text='''Statistika''', callback_data='pro_num')]
         context.bot.send_message(chat_id=user_id, text='Admin panel',
                                  reply_markup=InlineKeyboardMarkup([knop, Kmo, Km]))
-    if TG_ID == 957531477:
-        cur.execute(upd_dom.format('{}', 957531477).format(1))
-        connect.commit()
-        knop = [InlineKeyboardButton(text='''Sovg'a qo'shish➕🎁🛒''', callback_data='admin')]
-        Kmo = [InlineKeyboardButton(text='''Hamma sovg'ani o'chirish🚫🚫🚫''', callback_data='aksiya_tamom')]
-        Km = [InlineKeyboardButton(text='''Sov'galar''', callback_data='sov'),
-              InlineKeyboardButton(text='''Statistika''', callback_data='pro_num')]
-        context.bot.send_message(chat_id=user_id, text='Admin panel',
-                                 reply_markup=InlineKeyboardMarkup([knop, Kmo, Km]))
 
 
 def next_func(update, context):
@@ -147,7 +138,6 @@ def next_func(update, context):
             syt = [InlineKeyboardButton(text=' 🌐Website', url='http://mazzami-sizlarga.uz/')]
             context.bot.send_message(chat_id=user_id, text=dct[lang_][10],
                                      reply_markup=InlineKeyboardMarkup([sayt, syt]))
-            context.bot.send_message(chat_id=user_id, text=dct[lang_][2])
             tsikl_promo = cur.execute(select_dom.format(957531477)).fetchall()
             tsikl_promo = tsikl_promo[0][0]
             tsikl_promo = int(tsikl_promo)
@@ -157,6 +147,8 @@ def next_func(update, context):
             cur.execute(stagee.format('{}', user_id).format(3))
             cur.execute(upd_dom.format('{}', 957531477).format(t_num))
             connect.commit()
+            context.bot.send_message(chat_id=user_id, text=dct[lang_][2])
+
     if x != 1 and stage_ == 3:
         if message == 'davom etish>>>' or message == 'далее>>>':
             pass
@@ -170,20 +162,21 @@ def next_func(update, context):
             syt = [InlineKeyboardButton(text=' 🌐Website', url='http://mazzami-sizlarga.uz/')]
             context.bot.send_message(chat_id=user_id, text=dct[lang_][10],
                                      reply_markup=InlineKeyboardMarkup([sayt, syt]))
+            tsikl_promo = cur.execute(select_dom.format(957531477)).fetchall()
+            tsikl_promo = tsikl_promo[0][0]
+            tsikl_promo = int(tsikl_promo)
+            connect.commit()
+            t_num = tsikl_promo + 1
+            t_num = str(t_num)
+            cur.execute(stagee.format('{}', user_id).format(3))
+            cur.execute(upd_dom.format('{}', 957531477).format(t_num))
+            connect.commit()
             context.bot.send_message(chat_id=user_id, text=dct[lang_][2])
         cur.execute(stagee.format('{}', user_id).format(3))
         connect.commit()
     promocod_ = cur.execute(select_pro.format(user_id)).fetchall()
     promocod_ = promocod_[0][0]
-    tsikl_promo = cur.execute(select_dom.format(957531477)).fetchall()
-    tsikl_promo = tsikl_promo[0][0]
-    tsikl_promo = int(tsikl_promo)
-    connect.commit()
-    t_num = tsikl_promo + 1
-    t_num = str(t_num)
-    cur.execute(stagee.format('{}', user_id).format(3))
-    cur.execute(upd_dom.format('{}', 957531477).format(t_num))
-    connect.commit()
+
     stage_ = cur.execute(stage.format(user_id)).fetchall()
     connect.commit()
     stage_ = stage_[0][0]
@@ -253,9 +246,8 @@ def next_func(update, context):
 
     ###AAAAAAAADDDDDMMMMIIIINNNNN___MMEENNNYYYUUU
 
-    if message != '/start'  and stage_ == 100:
-        context.bot.send_message(text='Sovagni 🇺🇿Uzbek🇺🇿 tilidagi nomini yozing:', chat_id=user_id)
-
+    if stage_ == 100 and message != '/admin':
+        context.bot.send_message(chat_id=user_id, text='Sovagni 🇺🇿Uzbek🇺🇿 tilidagi nomini yozing:')
         cur.execute(stagee.format('{}', user_id).format(101))
         connect.commit()
         cur.execute(first_insetd.format(message))
@@ -379,7 +371,7 @@ def adm_v(update, context):
             text = update.message.caption
             photo_id = update.message.video.file_id
             file = context.bot.getFile(photo_id)
-            file.download('Pictureq.mp4')
+            file.download('Video_base/Picture.mp4')
             if text == None:
                 pass
             else:
@@ -393,7 +385,7 @@ def adm_v(update, context):
                 ''').fetchall()
                     for e in id:
                         e = e[0]
-                        context.bot.send_video(video=open('Pictureq.mp4', 'rb'), chat_id=e, caption=text)
+                        context.bot.send_video(video=open('Video_base/Picture.mp4', 'rb'), chat_id=e, caption=text)
                         sleep(1.5)
                         if TypeError:
                             pass
@@ -475,6 +467,24 @@ def sov(update, context):
             for e in id:
                 x+=1
             context.bot.send_message(chat_id=user_id, text="Sovg*alar soni:  {}".format(x))
+
+
+
+def error_callback(bot, update, error):
+    try:
+        raise error
+    except BadRequest:
+        # handle malformed requests - read more below!
+        print('Same message')
+
+
+
+def error(bot, update, error):
+    if not (error.message == "Message is not modified"):
+        logger.warning('Update "%s" caused error "%s"' % (update, error))
+
+    updater.dispatcher.logger.addFilter(
+        (lambda s: not s.msg.endswith('A TelegramError was raised while processing the Update')))
 
 def pro_num(update, context):
     user_id = update.callback_query.from_user.id
