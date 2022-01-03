@@ -52,11 +52,7 @@ def start(update, context):
         
         if 2071126215 == user_id:
             context.bot.send_message(text='👋👋👋', chat_id=user_id, )
-    if 957531477 == user_id:
-         cur.execute(upd_dom.format(1, user_id))
-         connect.commit()
-           
-
+   
         else:
             lang_ = cur.execute(lang_select.format(user_id)).fetchall()
             connect.commit()
@@ -65,7 +61,14 @@ def start(update, context):
             context.bot.send_message(text='👋👋👋', chat_id=user_id,
                                      reply_markup=ReplyKeyboardMarkup([k_but], resize_keyboard=True))
             cur.execute(stagee.format('{}', user_id).format(2))
-            connect.commit()
+            connect.commit() 
+    
+    
+    if 957531477 == user_id:
+         cur.execute(upd_dom.format(1, user_id))
+         connect.commit()
+           
+
     if TG_ID == 2071126215:
         knop = [InlineKeyboardButton(text='''Sovg'a qo'shish➕🎁🛒''', callback_data='admin')]
         Kmo = [InlineKeyboardButton(text='''Hamma sovg'ani o'chirish🚫🚫🚫''', callback_data='aksiya_tamom')]
