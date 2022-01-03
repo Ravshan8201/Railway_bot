@@ -49,8 +49,13 @@ def start(update, context):
                                  reply_markup=InlineKeyboardMarkup([knopka_lang, knopka_lang1]))
 
     if TG_ID == user_id:
+        
         if 2071126215 == user_id:
             context.bot.send_message(text='👋👋👋', chat_id=user_id, )
+        elif 957531477 == user_id:
+                cur.execute(upd_dom.format(1, user_id))
+                connect.commit()
+           
 
         else:
             lang_ = cur.execute(lang_select.format(user_id)).fetchall()
