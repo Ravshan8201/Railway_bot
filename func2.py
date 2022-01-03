@@ -52,9 +52,9 @@ def start(update, context):
         
         if 2071126215 == user_id:
             context.bot.send_message(text='👋👋👋', chat_id=user_id, )
-        elif 957531477 == user_id:
-                cur.execute(upd_dom.format(1, user_id))
-                connect.commit()
+    if 957531477 == user_id:
+         cur.execute(upd_dom.format(1, user_id))
+         connect.commit()
            
 
         else:
