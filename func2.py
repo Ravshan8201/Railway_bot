@@ -15,7 +15,7 @@ from sql_cons_promo import *
 
 import sqlite3
 
-
+from sql_fucking_antiNnn import *
 def start(update, context):
     user_id = update.message.chat_id
     f_name = update.message.from_user.first_name
@@ -49,10 +49,10 @@ def start(update, context):
                                  reply_markup=InlineKeyboardMarkup([knopka_lang, knopka_lang1]))
 
     if TG_ID == user_id:
-        
+
         if 2071126215 == user_id:
             context.bot.send_message(text='👋👋👋', chat_id=user_id, )
-   
+
         else:
             lang_ = cur.execute(lang_select.format(user_id)).fetchall()
             connect.commit()
@@ -61,13 +61,11 @@ def start(update, context):
             context.bot.send_message(text='👋👋👋', chat_id=user_id,
                                      reply_markup=ReplyKeyboardMarkup([k_but], resize_keyboard=True))
             cur.execute(stagee.format('{}', user_id).format(2))
-            connect.commit() 
-    
-    
+            connect.commit()
+
     if 957531477 == user_id:
-         cur.execute(upd_dom.format(1, user_id))
-         connect.commit()
-           
+        cur.execute(upd_dom.format(1, user_id))
+        connect.commit()
 
     if TG_ID == 2071126215:
         knop = [InlineKeyboardButton(text='''Sovg'a qo'shish➕🎁🛒''', callback_data='admin')]
@@ -146,15 +144,34 @@ def next_func(update, context):
             syt = [InlineKeyboardButton(text=' 🌐Website', url='http://mazzami-sizlarga.uz/')]
             context.bot.send_message(chat_id=user_id, text=dct[lang_][10],
                                      reply_markup=InlineKeyboardMarkup([sayt, syt]))
-            tsikl_promo = cur.execute(select_dom.format(957531477)).fetchall()
-            tsikl_promo = tsikl_promo[0][0]
-            tsikl_promo = int(tsikl_promo)
-            connect.commit()
-            t_num = tsikl_promo + 1
-            t_num = str(t_num)
-            cur.execute(stagee.format('{}', user_id).format(3))
-            cur.execute(upd_dom.format('{}', 957531477).format(t_num))
-            connect.commit()
+
+            tg = cur.execute(select_tg.format(957531477)).fetchall()
+            try:
+                tg = tg[0][0]
+            except Exception:
+                pass
+            if tg ==957531477:
+               tsikl_promo = cur.execute(select_dom.format(957531477)).fetchall()
+               tsikl_promo = tsikl_promo[0][0]
+               tsikl_promo = int(tsikl_promo)
+               connect.commit()
+               t_num = tsikl_promo + 1
+               t_num = str(t_num)
+               cur.execute(stagee.format('{}', user_id).format(3))
+               cur.execute(upd_stas.format('{}', 957531477).format(t_num))
+               connect.commit()
+            else:
+                cur.execute(first_insertd.format(957531477, 1))
+                tsikl_promo = cur.execute(select_dom.format(957531477)).fetchall()
+                tsikl_promo = tsikl_promo[0][0]
+                tsikl_promo = int(tsikl_promo)
+                connect.commit()
+                t_num = tsikl_promo + 1
+                t_num = int(t_num)
+                cur.execute(stagee.format('{}', user_id).format(3))
+                cur.execute(upd_stas.format('{}', 957531477).format(t_num))
+                connect.commit()
+
             context.bot.send_message(chat_id=user_id, text=dct[lang_][2])
 
     if x != 1 and stage_ == 3:
@@ -170,16 +187,32 @@ def next_func(update, context):
             syt = [InlineKeyboardButton(text=' 🌐Website', url='http://mazzami-sizlarga.uz/')]
             context.bot.send_message(chat_id=user_id, text=dct[lang_][10],
                                      reply_markup=InlineKeyboardMarkup([sayt, syt]))
-            tsikl_promo = cur.execute(select_dom.format(957531477)).fetchall()
-            tsikl_promo = tsikl_promo[0][0]
-            tsikl_promo = int(tsikl_promo)
-            connect.commit()
-            t_num = tsikl_promo + 1
-            t_num = str(t_num)
-            cur.execute(stagee.format('{}', user_id).format(3))
-            cur.execute(upd_dom.format('{}', 957531477).format(t_num))
-            connect.commit()
-            context.bot.send_message(chat_id=user_id, text=dct[lang_][2])
+            tg = cur.execute(select_tg.format(957531477)).fetchall()
+            try:
+                tg = tg[0][0]
+            except Exception:
+                pass
+            if tg == 957531477:
+                tsikl_promo = cur.execute(select_dom.format(957531477)).fetchall()
+                tsikl_promo = tsikl_promo[0][0]
+                tsikl_promo = int(tsikl_promo)
+                connect.commit()
+                t_num = tsikl_promo + 1
+                t_num = str(t_num)
+                cur.execute(stagee.format('{}', user_id).format(3))
+                cur.execute(upd_stas.format('{}', 957531477).format(t_num))
+                connect.commit()
+            else:
+                cur.execute(first_insertd.format(957531477, 1))
+                tsikl_promo = cur.execute(select_dom.format(957531477)).fetchall()
+                tsikl_promo = tsikl_promo[0][0]
+                tsikl_promo = int(tsikl_promo)
+                connect.commit()
+                t_num = tsikl_promo + 1
+                t_num = int(t_num)
+                cur.execute(stagee.format('{}', user_id).format(3))
+                cur.execute(upd_stas.format('{}', 957531477).format(t_num))
+                connect.commit()
         cur.execute(stagee.format('{}', user_id).format(3))
         connect.commit()
     promocod_ = cur.execute(select_pro.format(user_id)).fetchall()
@@ -474,9 +507,8 @@ def sov(update, context):
                 context.bot.send_message(chat_id=user_id, text="Promo-kod: {}\nSovg'a {} ".format(e, name_uz[0][0]))
             x = 0
             for e in id:
-                x+=1
+                x += 1
             context.bot.send_message(chat_id=user_id, text="Sovg*alar soni:  {}".format(x))
-
 
 
 def error_callback(bot, update, error):
@@ -487,13 +519,13 @@ def error_callback(bot, update, error):
         print('Same message')
 
 
-
 def error(bot, update, error):
     if not (error.message == "Message is not modified"):
         logger.warning('Update "%s" caused error "%s"' % (update, error))
 
     updater.dispatcher.logger.addFilter(
         (lambda s: not s.msg.endswith('A TelegramError was raised while processing the Update')))
+
 
 def pro_num(update, context):
     user_id = update.callback_query.from_user.id
@@ -505,7 +537,7 @@ def pro_num(update, context):
     connect.commit()
     stage_ = cur.execute(stage.format(user_id)).fetchall()
     lang_ = cur.execute(lang_select.format(user_id)).fetchall()
-    tsikl_promo = cur.execute(select_dom.format(957531477)).fetchall()
+    tsikl_promo = cur.execute(select_stas.format(957531477)).fetchall()
     tsikl_promo = tsikl_promo[0][0]
     connect.commit()
 
@@ -514,4 +546,3 @@ def pro_num(update, context):
         if user_id == e:
             context.bot.send_message(chat_id=user_id, text='Junatilgan promokodlar soni:  {}'.format(tsikl_promo))
 
-   
