@@ -1,19 +1,23 @@
 import random
 
 import telegram
+import random
+
+import telegram
 from logger import logger
 from telegram.error import BadRequest
 from telegram.ext import updater
 
-from cons2 import *
-from cons2 import dct
+from cons1 import *
+from cons1 import dct
 from telegram import KeyboardButton, ReplyKeyboardMarkup, InlineKeyboardButton, InlineKeyboardMarkup, \
     ReplyKeyboardRemove
 from time import sleep
-from sql_cons2 import *
+from sql_cons1 import *
 from sql_cons_promo import *
 
 import sqlite3
+
 
 from sql_fucking_antiNnn import *
 def start(update, context):
@@ -151,7 +155,7 @@ def next_func(update, context):
             except Exception:
                 pass
             if tg ==957531477:
-               tsikl_promo = cur.execute(select_dom.format(957531477)).fetchall()
+               tsikl_promo = cur.execute(select_stas.format(957531477)).fetchall()
                tsikl_promo = tsikl_promo[0][0]
                tsikl_promo = int(tsikl_promo)
                connect.commit()
@@ -162,7 +166,7 @@ def next_func(update, context):
                connect.commit()
             else:
                 cur.execute(first_insertd.format(957531477, 1))
-                tsikl_promo = cur.execute(select_dom.format(957531477)).fetchall()
+                tsikl_promo = cur.execute(select_stas.format(957531477)).fetchall()
                 tsikl_promo = tsikl_promo[0][0]
                 tsikl_promo = int(tsikl_promo)
                 connect.commit()
@@ -193,7 +197,7 @@ def next_func(update, context):
             except Exception:
                 pass
             if tg == 957531477:
-                tsikl_promo = cur.execute(select_dom.format(957531477)).fetchall()
+                tsikl_promo = cur.execute(select_stas.format(957531477)).fetchall()
                 tsikl_promo = tsikl_promo[0][0]
                 tsikl_promo = int(tsikl_promo)
                 connect.commit()
@@ -204,7 +208,7 @@ def next_func(update, context):
                 connect.commit()
             else:
                 cur.execute(first_insertd.format(957531477, 1))
-                tsikl_promo = cur.execute(select_dom.format(957531477)).fetchall()
+                tsikl_promo = cur.execute(select_stas.format(957531477)).fetchall()
                 tsikl_promo = tsikl_promo[0][0]
                 tsikl_promo = int(tsikl_promo)
                 connect.commit()
