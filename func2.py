@@ -9,7 +9,7 @@ from telegram.error import BadRequest
 from telegram.ext import updater
 
 from cons2 import *
-from cons3 import dct
+from cons2 import dct
 from telegram import KeyboardButton, ReplyKeyboardMarkup, InlineKeyboardButton, InlineKeyboardMarkup, \
     ReplyKeyboardRemove
 from time import sleep
