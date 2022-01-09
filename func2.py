@@ -8,12 +8,12 @@ from logger import logger
 from telegram.error import BadRequest
 from telegram.ext import updater
 
-from cons1 import *
-from cons1 import dct
+from cons2 import *
+from cons3 import dct
 from telegram import KeyboardButton, ReplyKeyboardMarkup, InlineKeyboardButton, InlineKeyboardMarkup, \
     ReplyKeyboardRemove
 from time import sleep
-from sql_cons1 import *
+from sql_cons2 import *
 from sql_cons_promo import *
 
 import sqlite3
