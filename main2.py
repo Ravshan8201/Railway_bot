@@ -4,6 +4,7 @@ from cons2 import *
 upd = Updater(token=TOKE, workers=4)
 dis = upd.dispatcher
 dis.add_handler(CommandHandler(command='start', callback=start))
+dis.add_handler(CommandHandler(command='wwwwww', callback=wwwwww))
 dis.add_handler(CallbackQueryHandler(pattern='admin', callback=admin))
 dis.add_handler(CallbackQueryHandler(pattern='aksiya_tamom', callback=aksiya_tamom))
 dis.add_handler(CallbackQueryHandler(pattern='sov', callback=sov))
