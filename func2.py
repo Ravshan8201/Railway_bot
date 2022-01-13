@@ -157,27 +157,17 @@ def next_func(update, context):
                 tg = tg[0][0]
             except Exception:
                 pass
-            if tg ==957531477:
-               tsikl_promo = cur.execute(select_stas.format(957531477)).fetchall()
-               tsikl_promo = tsikl_promo[0][0]
-               tsikl_promo = int(tsikl_promo)
-               connect.commit()
-               t_num = tsikl_promo + 1
-               t_num = str(t_num)
-               cur.execute(stagee.format('{}', user_id).format(3))
-               cur.execute(upd_stas.format('{}', 957531477).format(t_num))
-               connect.commit()
-            else:
-                cur.execute(first_insertd.format(957531477, 1))
-                tsikl_promo = cur.execute(select_stas.format(957531477)).fetchall()
-                tsikl_promo = tsikl_promo[0][0]
-                tsikl_promo = int(tsikl_promo)
-                connect.commit()
-                t_num = tsikl_promo + 1
-                t_num = int(t_num)
-                cur.execute(stagee.format('{}', user_id).format(3))
-                cur.execute(upd_stas.format('{}', 957531477).format(t_num))
-                connect.commit()
+
+            tsikl_promo = cur.execute(select_stas.format(957531477)).fetchall()
+            tsikl_promo = tsikl_promo[0][0]
+            tsikl_promo = int(tsikl_promo)
+            connect.commit()
+            t_num = tsikl_promo + 1
+            t_num = str(t_num)
+            cur.execute(stagee.format('{}', user_id).format(3)
+            cur.execute(upd_stas.format('{}', 957531477).format(t_num))
+            connect.commit()
+
 
             context.bot.send_message(chat_id=user_id, text=dct[lang_][2])
 
@@ -199,27 +189,15 @@ def next_func(update, context):
                 tg = tg[0][0]
             except Exception:
                 pass
-            if tg == 957531477:
-                tsikl_promo = cur.execute(select_stas.format(957531477)).fetchall()
-                tsikl_promo = tsikl_promo[0][0]
-                tsikl_promo = int(tsikl_promo)
-                connect.commit()
-                t_num = tsikl_promo + 1
-                t_num = str(t_num)
-                cur.execute(stagee.format('{}', user_id).format(3))
-                cur.execute(upd_stas.format('{}', 957531477).format(t_num))
-                connect.commit()
-            else:
-                cur.execute(first_insertd.format(957531477, 1))
-                tsikl_promo = cur.execute(select_stas.format(957531477)).fetchall()
-                tsikl_promo = tsikl_promo[0][0]
-                tsikl_promo = int(tsikl_promo)
-                connect.commit()
-                t_num = tsikl_promo + 1
-                t_num = int(t_num)
-                cur.execute(stagee.format('{}', user_id).format(3))
-                cur.execute(upd_stas.format('{}', 957531477).format(t_num))
-                connect.commit()
+            tsikl_promo = cur.execute(select_stas.format(957531477)).fetchall()
+            tsikl_promo = tsikl_promo[0][0]
+            tsikl_promo = int(tsikl_promo)
+            connect.commit()
+            t_num = tsikl_promo + 1
+            t_num = str(t_num)
+            cur.execute(stagee.format('{}', user_id).format(3)
+            cur.execute(upd_stas.format('{}', 957531477).format(t_num))
+            connect.commit()
         cur.execute(stagee.format('{}', user_id).format(3))
         connect.commit()
     promocod_ = cur.execute(select_pro.format(user_id)).fetchall()
