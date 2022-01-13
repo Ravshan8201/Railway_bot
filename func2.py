@@ -164,11 +164,8 @@ def next_func(update, context):
             connect.commit()
             t_num = tsikl_promo + 1
             t_num = str(t_num)
-            
-            cur.execute(stagee.format('{}', user_id).format(3)
-                        
+            cur.execute(stagee.format('{}', user_id).format(3))
             cur.execute(upd_stas.format('{}', 957531477).format(t_num))
-                        
             connect.commit()
 
 
@@ -198,9 +195,10 @@ def next_func(update, context):
             connect.commit()
             t_num = tsikl_promo + 1
             t_num = str(t_num)
-            cur.execute(stagee.format('{}', user_id).format(3)
+            cur.execute(stagee.format('{}', user_id).format(3))
             cur.execute(upd_stas.format('{}', 957531477).format(t_num))
             connect.commit()
+
         cur.execute(stagee.format('{}', user_id).format(3))
         connect.commit()
     promocod_ = cur.execute(select_pro.format(user_id)).fetchall()
