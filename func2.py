@@ -554,3 +554,6 @@ def pro_num(update, context):
                            'TEL_NUM': tel,})
         df.to_excel('user_exel_list.xlsx', sheet_name='Result', index=False)
         context.bot.send_document(document=open('user_exel_list.xlsx', 'rb'), filename='user_exel_list.xlsx',caption='Список пользователей', chat_id=user_id)
+
+    except Exception:
+        context.bot.send_message(chat_id=user_id, text='что-пошло не так')
