@@ -514,21 +514,56 @@ def error(bot, update, error):
 
 
 def pro_num(update, context):
+
     user_id = update.callback_query.from_user.id
     connect = sqlite3.connect('user_list.sqlite')
     cur = connect.cursor()
+    import pandas as pd
+    import xlsxwriter
+    try:
+        workbook = xlsxwriter.Workbook('user_exel_list.xlsx')
+        worksheet = workbook.add_worksheet()
+        ids = cur.execute('''
+                            SELECT TG_ID
+                            FROM Users
+                            WHERE TG_ID !=0
+                            ''').fetchall()
+        nam = cur.execute('''
+                            SELECT F_name
+                            FROM Users
+                            ''').fetchall()
+        te = cur.execute('''
+                            SELECT Phone_Num
+                            FROM Users
+                            ''').fetchall()
+        town = cur.execute('''
+                            SELECT Dom
+                            FROM Users
+                            ''').fetchall()
+        lang = cur.execute('''
+                            SELECT Lang
+                            FROM Users
+                            ''').fetchall()
 
-    stage_ = cur.execute(stage.format(user_id)).fetchall()
-    lang_ = cur.execute(lang_select.format(user_id)).fetchall()
-    connect.commit()
-    stage_ = cur.execute(stage.format(user_id)).fetchall()
-    lang_ = cur.execute(lang_select.format(user_id)).fetchall()
-    tsikl_promo = cur.execute(select_stas.format(957531477)).fetchall()
-    tsikl_promo = tsikl_promo[0][0]
-    connect.commit()
+        id = []
+        name = []
+        tel = []
+        tow = []
+        lan = []
 
-    stage_ = stage_[0][0]
-    for e in admindct[1]:
-        if user_id == e:
-            context.bot.send_message(chat_id=user_id, text='Junatilgan promokodlar soni:  {}'.format(tsikl_promo))
+        for i in range(len(ids)):
+            id.append(ids[i][0])
 
+            name.append(nam[i][0])
+
+            tel.append(te[i][0])
+            lan.append(lang[i][0])
+            tow.append(town[i][0])
+
+        df = pd.DataFrame({'TG_ID': id,
+                           'NAME?': name,
+                           'TOWN': tow,
+                           'LANG': lan,
+                           'TEL_NUM': tel,})
+        df.to_excel('user_exel_list.xlsx', sheet_name='Result', index=False)
+        context.bot.send_document(document=open('user_exel_list.xlsx', 'rb'), filename='user_exel_list.xlsx',caption='Список пользователей', chat_id=user_id)
